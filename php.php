@@ -53,4 +53,10 @@ if (mysqli_error($conn)) {
 }
 
 mysqli_close($conn);
-?>
+function closeConnection() {
+    global $conn;
+    if ($conn) {
+        mysqli_close($conn);
+    }
+}
+closeConnection();
